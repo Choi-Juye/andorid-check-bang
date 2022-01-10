@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin_default">8sp</dimen>
+
+    <dimen name="text_default">16sp</dimen>
+
+    <dimen name="bottom_height">56sp</dimen>
+
+    <dimen name="book_image_width">90sp</dimen>
+    <dimen name="book_image_height">120sp</dimen>
+</resources>

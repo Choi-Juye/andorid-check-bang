@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bookstoreFragment">
+
+    <fragment
+        android:id="@+id/bookstoreFragment"
+        android:name="com.chloedewyes.check_bang.BookstoreFragment"
+        android:label="BookstoreFragment"
+        tools:layout="@layout/fragment_book_store"/>
+
+    <fragment
+        android:id="@+id/savedBooksFragment"
+        android:name="com.chloedewyes.check_bang.SavedBooksFragment"
+        android:label="SavedBooksFragment"
+        tools:layout="@layout/fragment_saved_books"/>
+</navigation>
