@@ -4,6 +4,9 @@ plugins {
     id 'androidx.navigation.safeargs.kotlin'
 }
 
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 android {
     compileSdk 31
 
@@ -15,6 +18,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "X_Naver_Client_Id", properties['X_Naver_Client_Id']
+        buildConfigField "String", "X_Naver_Client_Secret", properties['X_Naver_Client_Secret']
     }
 
     buildTypes {
@@ -48,4 +54,10 @@ dependencies {
 
     implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
+
+    implementation 'androidx.lifecycle:lifecycle-service:2.3.1'
 }
