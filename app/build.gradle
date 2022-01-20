@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-kapt'
 }
 
 Properties properties = new Properties()
@@ -19,8 +20,8 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "X_Naver_Client_Id", properties['X_Naver_Client_Id']
-        buildConfigField "String", "X_Naver_Client_Secret", properties['X_Naver_Client_Secret']
+        buildConfigField "String", "clientId", properties['clientId']
+        buildConfigField "String", "clientSecret", properties['clientSecret']
     }
 
     buildTypes {
@@ -59,5 +60,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
 
-    implementation 'androidx.lifecycle:lifecycle-service:2.3.1'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    kapt 'com.github.bumptech.glide:compiler:4.12.0'
 }
