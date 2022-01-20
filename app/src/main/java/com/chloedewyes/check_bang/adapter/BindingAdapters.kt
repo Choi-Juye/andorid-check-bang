@@ -5,6 +5,9 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.chloedewyes.check_bang.models.Item
+import android.webkit.WebView
+import android.webkit.WebViewClient
+
 
 @BindingAdapter("app:bindSearchBook")
 fun bindSearchBook(recyclerView: RecyclerView, searchBook: List<Item>?) {

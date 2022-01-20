@@ -7,13 +7,25 @@
 
     <fragment
         android:id="@+id/bookstoreFragment"
-        android:name="com.chloedewyes.check_bang.BookStoreFragment"
+        android:name="com.chloedewyes.check_bang.ui.BookStoreFragment"
         android:label="BookstoreFragment"
-        tools:layout="@layout/fragment_book_store"/>
+        tools:layout="@layout/fragment_book_store">
+        <action
+            android:id="@+id/action_bookstoreFragment_to_bookViewFragment"
+            app:destination="@id/bookViewFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/savedBooksFragment"
-        android:name="com.chloedewyes.check_bang.SavedBooksFragment"
+        android:name="com.chloedewyes.check_bang.ui.SavedBooksFragment"
         android:label="SavedBooksFragment"
         tools:layout="@layout/fragment_saved_books"/>
+    <fragment
+        android:id="@+id/bookViewFragment"
+        android:name="com.chloedewyes.check_bang.ui.BookViewFragment"
+        android:label="BookViewFragment" >
+        <argument
+            android:name="bookItem"
+            app:argType="com.chloedewyes.check_bang.models.Item" />
+    </fragment>
 </navigation>

@@ -11,9 +11,15 @@ import com.chloedewyes.check_bang.models.Item
 
 class BookAdapter : ListAdapter<Item, BookAdapter.BookViewHolder>(differCallback) {
 
+    private var onItemClickListener: ((Item) -> Unit)? = null
+
     inner class BookViewHolder(private val binding: ItemBookBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Item) {
             binding.item = item
+
+            itemView.setOnClickListener {
+                onItemClickListener?.let { it(item) }
+            }
         }
     }
 
@@ -28,6 +34,10 @@ class BookAdapter : ListAdapter<Item, BookAdapter.BookViewHolder>(differCallback
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
         holder.bind(getItem(position))
+    }
+
+    fun setOnItemClickListener(listener: (Item) -> Unit) {
+        onItemClickListener = listener
     }
 
 
