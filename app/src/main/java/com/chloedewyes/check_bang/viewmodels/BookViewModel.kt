@@ -1,6 +1,7 @@
 package com.chloedewyes.check_bang.viewmodels
 
 import android.app.Application
+import android.view.View
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,12 +9,16 @@ import androidx.lifecycle.viewModelScope
 import com.chloedewyes.check_bang.db.BookItemDatabase
 import com.chloedewyes.check_bang.models.Item
 import com.chloedewyes.check_bang.repositories.BookRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class BookViewModel(app: Application) : AndroidViewModel(app) {
+@HiltViewModel
+class BookViewModel @Inject constructor(val bookRepository: BookRepository) : ViewModel() {
 
-    val bookDao = BookItemDatabase.invoke(app).getBookDao()
-    var bookRepository = BookRepository(bookDao)
+    /*val bookDao = BookItemDatabase.invoke(app).getBookDao()
+    var bookRepository = BookRepository(bookDao)*/
+
     val bookItem: MutableLiveData<List<Item>> = MutableLiveData()
     var searchBookDisplay = 10
 

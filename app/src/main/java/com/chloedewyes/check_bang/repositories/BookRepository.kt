@@ -7,8 +7,9 @@ import com.chloedewyes.check_bang.db.BookDao
 import com.chloedewyes.check_bang.db.BookItemDatabase
 
 import com.chloedewyes.check_bang.models.Item
+import javax.inject.Inject
 
-class BookRepository(private val bookDao: BookDao) {
+class BookRepository @Inject constructor(val bookDao: BookDao) {
 
     suspend fun searchBook(searchQuery: String, displayNumber: Int) =
         RetrofitBuilder.api.searchForBook(searchQuery, displayNumber)
