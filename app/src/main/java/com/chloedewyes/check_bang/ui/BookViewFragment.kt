@@ -1,18 +1,13 @@
 package com.chloedewyes.check_bang.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebViewClient
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
-import com.chloedewyes.check_bang.R
-import com.chloedewyes.check_bang.adapter.BookAdapter
 import com.chloedewyes.check_bang.databinding.FragmentBookViewBinding
 import com.chloedewyes.check_bang.viewmodels.BookViewModel
 import com.google.android.material.snackbar.Snackbar

@@ -1,10 +1,7 @@
 package com.chloedewyes.check_bang.repositories
 
-import android.app.Application
-import android.content.Context
 import com.chloedewyes.check_bang.api.RetrofitBuilder
 import com.chloedewyes.check_bang.db.BookDao
-import com.chloedewyes.check_bang.db.BookItemDatabase
 
 import com.chloedewyes.check_bang.models.Item
 import javax.inject.Inject

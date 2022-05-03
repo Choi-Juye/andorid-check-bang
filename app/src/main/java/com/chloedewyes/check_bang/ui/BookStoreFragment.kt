@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.chloedewyes.check_bang.R
 import com.chloedewyes.check_bang.adapter.BookAdapter
