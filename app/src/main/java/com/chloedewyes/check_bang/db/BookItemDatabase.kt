@@ -15,6 +15,7 @@ abstract class BookItemDatabase: RoomDatabase() {
 
     abstract fun getBookDao(): BookDao
 
+    /*
     companion object {
 
         @Volatile
@@ -31,6 +32,6 @@ abstract class BookItemDatabase: RoomDatabase() {
                 BookItemDatabase::class.java,
                 "bookItem_db.db"
             ).build()
-    }
+    }*/
 
 }
