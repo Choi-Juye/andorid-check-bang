@@ -13,11 +13,13 @@ import com.chloedewyes.check_bang.R
 import com.chloedewyes.check_bang.adapter.BookAdapter
 import com.chloedewyes.check_bang.databinding.FragmentBookStoreBinding
 import com.chloedewyes.check_bang.viewmodels.BookViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class BookStoreFragment : Fragment() {
 
     private var _binding: FragmentBookStoreBinding? = null

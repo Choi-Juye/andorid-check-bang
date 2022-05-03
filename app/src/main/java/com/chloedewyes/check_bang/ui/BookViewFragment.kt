@@ -16,8 +16,9 @@ import com.chloedewyes.check_bang.adapter.BookAdapter
 import com.chloedewyes.check_bang.databinding.FragmentBookViewBinding
 import com.chloedewyes.check_bang.viewmodels.BookViewModel
 import com.google.android.material.snackbar.Snackbar
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class BookViewFragment : Fragment() {
 
     private var _binding: FragmentBookViewBinding? = null
