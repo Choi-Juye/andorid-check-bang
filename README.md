@@ -17,6 +17,9 @@
 
 - Naver API
 
+## Journal.
+[책방-개발일지](https://blog.naver.com/love_most_deeply/223039864248)
+
 
 ## Preview.
 - 네이버 검색 API를 통해 책을 검색하고 저장, 삭제할 수 있습니다.   
