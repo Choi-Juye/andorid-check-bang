@@ -18,7 +18,7 @@
 - Naver API
 
 ## Journal.
-[책방-개발일지](https://blog.naver.com/love_most_deeply/223039864248)
+[책방-개발일지](https://lkjkroil.tistory.com/entry/Android-Kotlin-책방-앱-개발일지-Hilt로-리팩토링)
 
 
 ## Preview.
